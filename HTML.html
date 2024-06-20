@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Online</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 0 20px;
+        }
+
+        /* Estilo do Cabeçalho */
+        header {
+            background: #6A0DAD;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+
+        /* Estilo do Principal */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1e1e1e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro, .products, .cta, .contact {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .intro p, .cta p {
+            font-size: 1.2em;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            background: #333;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            animation: scaleIn 0.5s ease-out;
+            cursor: pointer;
+            transition: transform 0.2s ease-out;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .product img {
+            width: 250px;
+            height: 250px;
+            border-radius: 5px;
+            animation: fadeIn 1s forwards;
+        }
+
+        .product h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .cta {
+            text-align: center;
+            padding: 20px;
+            background: #4B0082;
+            border-radius: 5px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .cta button, .cta a {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta button:hover, .cta a:hover {
+            background-color: #4B0082;
+        }
+
+        .contact {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 1s forwards;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #333;
+            color: #e0e0e0;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #4B0082;
+        }
+
+        /* Estilo do Rodapé */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #6A0DAD;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+            animation: slideInUp 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Minha Loja Online</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Encontre os melhores produtos aqui na nossa loja online!</p>
+        </section>
+        <section class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250x250.png?text=Produto+1" alt="Produto 1">
+                <h2>Produto 1</h2>
+                <p>Descrição breve do produto 1.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x250.png?text=Produto+2" alt="Produto 2">
+                <h2>Produto 2</h2>
+                <p>Descrição breve do produto 2.</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250x250.png?text=Produto+3" alt="Produto 3">
+                <h2>Produto 3</h2>
+                <p>Descrição breve do produto 3.</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+        <section class="cta">
+            <p>Não perca nossas ofertas especiais! Entre em contato através do email:</p>
+            <p><a href="mailto:joaomods57@gmail.com">joaomods57@gmail.com</a></p>
+        </section>
+        <section class="contact">
+            <h2>Contato</h2>
+            <form action="mailto:joaomods57@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Minha Loja Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Animações adicionais com JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = document.querySelectorAll('.product');
+            products.forEach((product, index) => {
+                product.style.animation = `fadeIn 1s ${index * 0.3}s forwards`;
+            });
+
+            const ctaSections = document.querySelectorAll('.cta, .contact, footer');
+            ctaSections.forEach((section, index) => {
+                section.style.animation = `slideInUp 1s ${index * 0.3 + 0.5}s forwards`;
+            });
+
+            // Animação do rodapé
+            const footer = document.querySelector('footer');
+            footer.style.animation = `slideInUp 1s ${ctaSections.length * 0.3 + 0.5}s forwards`;
+
+            // Efeito hover nos produtos
+            products.forEach(product => {
+                product.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                product.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
